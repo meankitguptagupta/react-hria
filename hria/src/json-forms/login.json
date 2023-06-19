@@ -1,0 +1,22 @@
+[
+    {
+        "id": "username",
+        "label": "Username",
+        "type": "text",
+        "placeholder": "Enter your name",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-sm-12",
+        "labelClass": "text-sm fw-semibold",
+        "inputClass": "text-sm bg-light form-control-sm border-0"
+    },
+    {
+        "id": "password",
+        "label": "Password",
+        "type": "password",
+        "placeholder": "Enter your password",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-sm-12",
+        "labelClass": "text-sm fw-semibold",
+        "inputClass": "text-sm bg-light form-control-sm border-0"
+    }
+]

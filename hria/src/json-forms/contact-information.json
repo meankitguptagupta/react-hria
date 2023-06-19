@@ -1,0 +1,69 @@
+[
+    {
+        "id": "province",
+        "label": "Province *",
+        "type": "select",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": "",
+        "options": [
+            {
+                "value": "punjab",
+                "label": "Punjab"
+            },
+            {
+                "value": "sindh",
+                "label": "Sindh"
+            },
+            {
+                "value": "balochistan",
+                "label": "Balochistan"
+            },
+            {
+                "value": "kpk",
+                "label": "K.P.K"
+            },
+            {
+                "value": "ajk",
+                "label": "A.J.K"
+            },
+            {
+                "value": "gilgit baltistan",
+                "label": "Gilgit Baltistan"
+            }
+        ]
+    },
+    {
+        "id": "district",
+        "label": "Domicile District *",
+        "type": "select",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": "",
+        "options": []
+    },
+    {
+        "id": "home_address",
+        "label": "Permanent Home Address *",
+        "type": "textarea",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": "h-100"
+    },
+    {
+        "id": "postal_address",
+        "label": "Postal Home Address *",
+        "type": "textarea",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": "h-100"
+    }
+]

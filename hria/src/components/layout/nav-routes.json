@@ -1,0 +1,30 @@
+[
+    {
+        "route": "",
+        "label": "Student Profile"
+    },
+    {
+        "route": "programs",
+        "label": "Select Program"
+    },
+    {
+        "route": "qualifications",
+        "label": "Qualifications"
+    },
+    {
+        "route": "uploads",
+        "label": "Document Upload"
+    },
+    {
+        "route": "facilities",
+        "label": "Select Facilities"
+    },
+    {
+        "route": "submit",
+        "label": "Submit"
+    },
+    {
+        "route": "Submit",
+        "label": "Download & Print"
+    }
+]

@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  hria_university:
+    image: hria_university
+    container_name: hria_university
+    volumes:  
+      - ./hria:/home/code
+    ports:
+      - 3000:3000
+    tty: true
+    restart: unless-stopped
+    command: ["npm", "run", "start"]

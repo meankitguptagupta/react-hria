@@ -1,0 +1,94 @@
+[
+    {
+        "id": "guardian_image",
+        "label": "",
+        "type": "image_upload",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-sm-12",
+        "labelClass": "text-secondary",
+        "inputClass": ""
+    },
+    {
+        "id": "relation",
+        "label": "Relation *",
+        "type": "select",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": "",
+        "options": [
+            {
+                "value": "father",
+                "label": "Father"
+            },
+            {
+                "value": "brother",
+                "label": "Brother"
+            },
+            {
+                "value": "uncle",
+                "label": "Uncle"
+            },
+            {
+                "value": "aunt",
+                "label": "Aunt"
+            },
+            {
+                "value": "mother",
+                "label": "Mother"
+            },
+            {
+                "value": "sister",
+                "label": "Sister"
+            },
+            {
+                "value": "self",
+                "label": "Self"
+            },
+            {
+                "value": "grandfather",
+                "label": "Grandfather"
+            },
+            {
+                "value": "grandmother",
+                "label": "Grandmother"
+            },
+            {
+                "value": "other",
+                "label": "Other"
+            }
+        ]
+    },
+    {
+        "id": "guardian_name",
+        "label": "Full Name *",
+        "type": "text",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": ""
+    },
+    {
+        "id": "guardian_cnic",
+        "label": "National Idenity Card CNIC / B-Form *",
+        "type": "text",
+        "placeholder": "_____-_______-_",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": ""
+    },
+    {
+        "id": "guardian_phone",
+        "label": "Phone Number *",
+        "type": "text",
+        "placeholder": "Enter phone number like 0300-1234567",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-6",
+        "labelClass": "text-secondary",
+        "inputClass": ""
+    }
+]

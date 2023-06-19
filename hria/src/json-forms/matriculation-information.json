@@ -1,0 +1,76 @@
+[
+    {
+        "id": "degree",
+        "label": "Certificate / Degree *",
+        "type": "select",
+        "placeholder": "Select an option",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "inputClass": "",
+        "options": [
+            {
+                "value": "a-",
+                "label": "A Negative (A-)"
+            }
+        ]
+    },
+    {
+        "id": "religion",
+        "label": "Religion",
+        "type": "select",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "inputClass": "",
+        "options": [
+            {
+                "value": "muslim-",
+                "label": "Muslim"
+            },
+            {
+                "value": "christian",
+                "label": "Christian"
+            },
+            {
+                "value": "hindu",
+                "label": "Hindu"
+            }
+        ]
+    },
+    {
+        "id": "religion",
+        "label": "Religion",
+        "type": "select",
+        "placeholder": "",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "inputClass": "",
+        "options": [
+            {
+                "value": "muslim-",
+                "label": "Muslim"
+            },
+            {
+                "value": "christian",
+                "label": "Christian"
+            },
+            {
+                "value": "hindu",
+                "label": "Hindu"
+            }
+        ]
+    },
+    {
+        "id": "phone",
+        "label": "Applicant Phone Number *",
+        "type": "text",
+        "placeholder": "Enter phone number like 0300-1234567",
+        "defaultValue": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "inputClass": ""
+    }
+]
