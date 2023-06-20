@@ -4,7 +4,7 @@
         "label": "Username",
         "type": "text",
         "placeholder": "Enter your name",
-        "value": "one",
+        "value": "",
         "validations": [
             {
                 "required": true,
@@ -21,7 +21,7 @@
         "label": "Password",
         "type": "password",
         "placeholder": "Enter your password",
-        "value": "wto",
+        "value": "",
         "validations": [
             {
                 "required": true

@@ -3,31 +3,38 @@
         "id": "image",
         "label": "",
         "type": "image_upload",
-        "placeholder": "",
-        "defaultValue": "",
-        "formGroupClass": "mb-3 col-sm-12",
+        "formGroupClass": "mb-3",
         "labelClass": "text-secondary",
-        "inputClass": ""
+        "validations": [
+            {
+                "required": true
+            }
+        ]
     },
     {
         "id": "name",
         "label": "Full Name (as per school, college or university degree) *",
         "type": "text",
-        "placeholder": "",
-        "defaultValue": "",
         "formGroupClass": "mb-3 col-md-6",
         "labelClass": "text-secondary",
-        "inputClass": ""
+        "validations": [
+            {
+                "required": true
+            }
+        ]
     },
     {
         "id": "cnic",
         "label": "National Idenity Card CNIC / B-Form *",
         "type": "text",
         "placeholder": "_____-_______-_",
-        "defaultValue": "",
         "formGroupClass": "mb-3 col-md-6",
         "labelClass": "text-secondary",
-        "inputClass": ""
+        "validations": [
+            {
+                "required": true
+            }
+        ]
     },
     {
         "id": "gender",
@@ -39,18 +46,9 @@
         "labelClass": "text-secondary",
         "inputClass": "",
         "options": [
-            {
-                "value": "male",
-                "label": "Male"
-            },
-            {
-                "value": "female",
-                "label": "Female"
-            },
-            {
-                "value": "other",
-                "label": "Other"
-            }
+            "Male",
+            "Female",
+            "Other"
         ]
     },
     {
@@ -58,10 +56,8 @@
         "label": "Applicant Phone Number *",
         "type": "text",
         "placeholder": "Enter phone number like 0300-1234567",
-        "defaultValue": "",
         "formGroupClass": "mb-3 col-md-6",
-        "labelClass": "text-secondary",
-        "inputClass": ""
+        "labelClass": "text-secondary"
     },
     {
         "id": "blood_group",
@@ -111,44 +107,23 @@
         "id": "religion",
         "label": "Religion",
         "type": "select",
-        "placeholder": "",
-        "defaultValue": "",
         "formGroupClass": "mb-3 col-md-6",
         "labelClass": "text-secondary",
-        "inputClass": "",
         "options": [
-            {
-                "value": "muslim-",
-                "label": "Muslim"
-            },
-            {
-                "value": "christian",
-                "label": "Christian"
-            },
-            {
-                "value": "hindu",
-                "label": "Hindu"
-            }
+            "Muslim",
+            "Christian",
+            "Hindu"
         ]
     },
     {
         "id": "special_person",
         "label": "Are you a special person *",
         "type": "radio",
-        "placeholder": "",
-        "defaultValue": "",
-        "formGroupClass": "mb-3 col-sm-12",
+        "formGroupClass": "mb-3",
         "labelClass": "text-secondary me-5",
-        "inputClass": "",
         "options": [
-            {
-                "value": "y",
-                "label": "Yes"
-            },
-            {
-                "value": "n",
-                "label": "No"
-            }
+            "Yes",
+            "No"
         ]
     },
     {
@@ -156,39 +131,16 @@
         "label": "Physical Disabilities",
         "type": "select",
         "placeholder": "Select anyone",
-        "defaultValue": "",
         "formGroupClass": "mb-3 col-md-6",
         "labelClass": "text-secondary",
-        "inputClass": "",
         "options": [
-            {
-                "value": "dyslexia",
-                "label": "Dyslexia"
-            },
-            {
-                "value": "hearing",
-                "label": "Hearing"
-            },
-            {
-                "value": "neuro",
-                "label": "Neuro/Intellectual"
-            },
-            {
-                "value": "mobility",
-                "label": "Mobility"
-            },
-            {
-                "value": "physical",
-                "label": "Physical"
-            },
-            {
-                "value": "visual",
-                "label": "Visual"
-            },
-            {
-                "value": "any other",
-                "label": "Any Other"
-            }
+            "Dyslexia",
+            "Hearing",
+            "Neuro/Intellectual",
+            "Mobility",
+            "Physical",
+            "Visual",
+            "Any Other"
         ]
     }
 ]

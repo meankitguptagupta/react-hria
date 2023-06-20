@@ -39,9 +39,9 @@ const Login: React.FC = () => {
                 </Link>
             </div>
 
-            <button className="btn btn-primary text-sm mb-4" onClick={handleSubmit}>
+            <span className="btn btn-primary text-sm mb-4" onClick={handleSubmit}>
                 Sign in
-            </button>
+            </span>
         </div>
     );
 };

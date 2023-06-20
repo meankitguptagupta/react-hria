@@ -5,10 +5,10 @@ export interface FieldValidationProps {
 export interface Field {
     id: string;
     type: string;
-    value: string;
-    label: string;
-    placeholder: string;
-    validations: FieldValidationProps[],
+    value?: string;
+    label?: string;
+    placeholder?: string;
+    validations?: FieldValidationProps[],
     formGroupClass?: string;
     labelClass?: string;
     inputClass?: string;
@@ -33,4 +33,5 @@ export interface InputElementProps {
     id: string;
     type: string;
     inputClass?: string;
+    placeholder?: string;
 }

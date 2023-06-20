@@ -10,7 +10,7 @@ export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
 }) => {
 
     const initialValues: DataObject = formData.reduce(
-        (o: DataObject, i: Field) => ({ ...o, [i.id]: i.value }),
+        (o: DataObject, i: Field) => ({ ...o, [i.id]: i.value || '' }),
         {}
     );
 
@@ -37,14 +37,14 @@ export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
                 <div className="row">
                     {formData.map((field: Field, i: number) => (
                         <div
-                            className={`col-sm-12 ${field.formGroupClass}`}
+                            className={`col-sm-12 ${field?.formGroupClass}`}
                             key={`formdata-${i}`}
                         >
                             <label
-                                className={`lh-1 ${field.labelClass}`}
+                                className={`lh-1 ${field?.labelClass}`}
                                 htmlFor={field.id}
                             >
-                                {field.label}
+                                {field?.label}
                             </label>
                             {renderField(field)}
                             <ErrorMessage
