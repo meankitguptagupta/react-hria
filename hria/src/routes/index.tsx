@@ -6,12 +6,12 @@ import {
 
 const AuthLayout = lazy(() => import('../components/auth')),
     Login = lazy(() => import('../pages/auth')),
-    Signup = lazy(() => import('../pages/auth/Signup')),
-    ForgotPassword = lazy(() => import('../pages/auth/ForgotPassword')),
-    LayoutComponent = lazy(() => import('../components/layout')),
-    StudentProfile = lazy(() => import('../pages/student-profile')),
-    SelectProgram = lazy(() => import('../pages/select-program')),
-    Qualification = lazy(() => import('../pages/qualifications'))
+    // Signup = lazy(() => import('../pages/auth/Signup')),
+    // ForgotPassword = lazy(() => import('../pages/auth/ForgotPassword')),
+    LayoutComponent = lazy(() => import('../components/layout'))
+// StudentProfile = lazy(() => import('../pages/student-profile')),
+// SelectProgram = lazy(() => import('../pages/select-program')),
+// Qualification = lazy(() => import('../pages/qualifications'))
 
 export const router = createBrowserRouter([
     {
@@ -24,41 +24,42 @@ export const router = createBrowserRouter([
                     path: '',
                     element: <Login />,
                 },
-                {
-                    path: 'signup',
-                    element: <Signup />,
-                }, {
-                    path: 'forgot-password',
-                    element: <ForgotPassword />,
-                }]
-            },
-            {
-                path: "student",
-                element: <LayoutComponent />,
-                children: [{
-                    path: "",
-                    element: <StudentProfile />
-                }, {
-                    path: "programs",
-                    element: <SelectProgram />
-                }, {
-                    path: "qualifications",
-                    element: <Qualification />
-                }, //{
-                    //     path: "document-upload",
-                    //     element: <StudentProfile />
+                    // {
+                    //     path: 'signup',
+                    //     element: <Signup />,
                     // }, {
-                    //     path: "select-facilities",
-                    //     element: <StudentProfile />
-                    // }, {
-                    //     path: "submit",
-                    //     element: <StudentProfile />
-                    // }, {
-                    //     path: "download-&-print",
-                    //     element: <StudentProfile />
+                    //     path: 'forgot-password',
+                    //     element: <ForgotPassword />,
                     // }
                 ]
             },
+            // {
+            //     path: "student",
+            //     element: <LayoutComponent />,
+            //     children: [{
+            //         path: "",
+            //         element: <StudentProfile />
+            //     }, {
+            //         path: "programs",
+            //         element: <SelectProgram />
+            //     }, {
+            //         path: "qualifications",
+            //         element: <Qualification />
+            //     }, {
+            //         path: "document-upload",
+            //         element: <StudentProfile />
+            //     }, {
+            //         path: "select-facilities",
+            //         element: <StudentProfile />
+            //     }, {
+            //         path: "submit",
+            //         element: <StudentProfile />
+            //     }, {
+            //         path: "download-&-print",
+            //         element: <StudentProfile />
+            //     }
+            //     ]
+            // },
         ],
     },
 ]);

@@ -1,92 +1,61 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
-import { ImageUploadElement, InputElement, RadioCheckElement, SelectElement, TextareaElement } from './elements';
-import { DynamicFormComponentProps, Field as DynamicFormField, FieldWithValidation, FormDataObject } from './elements.interface';
+import React from "react";
+import { DataObject, DynamicFormProps, Field } from "./elements.interface";
+import { Form, Formik, FormikHelpers, ErrorMessage, Field as FormikField } from "formik";
+import InputElement from "./elements/InputElement";
+import createValidationSchema from "./validation.schema";
 
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
+    formData,
+    formRef
+}) => {
 
-const DynamicFormComponent: React.FC<DynamicFormComponentProps> = ({ formData, setFormValues }) => {
-    const initialValues = formData.reduce((obj: FormDataObject, field: DynamicFormField) => {
-        obj[field.id] = field.defaultValue || '';
-        return obj;
-    }, {});
-
-    const validationSchema = Yup.object().shape<any>(
-        formData.reduce((schema: FieldWithValidation, field: DynamicFormField) => {
-            if (field.validation) {
-                schema[field.id] = field.validation;
-            } else {
-                schema[field.id] = Yup.mixed();
-            }
-            return schema;
-        }, {} as FieldWithValidation)
+    const initialValues: DataObject = formData.reduce(
+        (o: DataObject, i: Field) => ({ ...o, [i.id]: i.value }),
+        {}
     );
 
-    const renderField = (field: DynamicFormField) => {
+    const validationSchema = createValidationSchema(formData);
+
+    const renderField = (field: Field) => {
         switch (field.type) {
-            case 'radio':
-            case 'checkbox':
-                return (
-                    <RadioCheckElement
-                        {...field}
-                    />
-                );
-            case 'select':
-                return (
-                    <SelectElement
-                        {...field}
-                    />
-                );
-            case 'image_upload':
-                return (
-                    <ImageUploadElement
-                        {...field}
-                    />
-                );
-            case 'textarea':
-                return (
-                    <TextareaElement
-                        {...field}
-                    />
-                );
             default:
-                return (
-                    <InputElement
-                        {...field}
-                    />
-                );
+                return <InputElement {...field} />;
         }
     };
 
+    const onSubmitForm = (values: DataObject, actions: FormikHelpers<DataObject>) => { };
+
+
     return (
         <Formik
+            innerRef={(ref) => (formRef.current = ref)}
             initialValues={initialValues}
-            onSubmit={(values, { setSubmitting }) => {
-                console.log('Submitted values:', values);
-                setSubmitting(false);
-            }}
             validationSchema={validationSchema}
+            onSubmit={onSubmitForm} // Updated onSubmit prop
         >
-            {({ isSubmitting }) => (
-                <Form>
-                    <div className="row">
-                        {formData.map((field, index) => (
-                            <div key={index} className={`col-sm-12 ${field.formGroupClass}`}>
-                                <label className={`${field.labelClass} lh-1`} htmlFor={field.id}>
-                                    {field.label}
-                                </label>
-                                {renderField(field)}
-                                <ErrorMessage name={field.id} component="small" className="text-danger" />
-                            </div>
-                        ))}
-                    </div>
-                    <button type="submit" className="btn btn-primary text-sm mb-4" disabled={isSubmitting}>
-                        Submit
-                    </button>
-                </Form>
-            )}
+            <Form>
+                <div className="row">
+                    {formData.map((field: Field, i: number) => (
+                        <div
+                            className={`col-sm-12 ${field.formGroupClass}`}
+                            key={`formdata-${i}`}
+                        >
+                            <label
+                                className={`lh-1 ${field.labelClass}`}
+                                htmlFor={field.id}
+                            >
+                                {field.label}
+                            </label>
+                            {renderField(field)}
+                            <ErrorMessage
+                                name={field.id}
+                                component="small"
+                                className="text-danger"
+                            />
+                        </div>
+                    ))}
+                </div>
+            </Form>
         </Formik>
     );
 };
-
-export default DynamicFormComponent;

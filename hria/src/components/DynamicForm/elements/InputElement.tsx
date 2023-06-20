@@ -1,20 +1,21 @@
-import React, { ChangeEvent } from 'react';
-import { Field, FieldAttributes, useField } from 'formik';
+import React from "react";
+import { Field, FieldInputProps, FieldProps } from "formik";
+import { InputElementProps } from "../elements.interface";
 
-interface InputElementProps extends FieldAttributes<any> {
-    inputClass?: string;
-}
-
-const InputElement: React.FC<InputElementProps> = ({ type = "text", id, inputClass, ...rest }) => {
-    const [field, meta] = useField(id);
-
-    return <Field
-        className={`form-control ${inputClass}`}
-        id={id}
-        type={type}
-        {...rest}
-        autoComplete="off" // Set autoComplete to "off"
-    />
+const InputElement: React.FC<InputElementProps> = ({ type, id, inputClass }) => {
+    return (
+        <Field name={id}>
+            {({ field }: { field: FieldInputProps<any> }) => (
+                <input
+                    {...field}
+                    className={`form-control ${inputClass}`}
+                    id={id}
+                    type={type}
+                    autoComplete="off"
+                />
+            )}
+        </Field>
+    );
 };
 
 export default InputElement;

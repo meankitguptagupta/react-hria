@@ -4,7 +4,14 @@
         "label": "Username",
         "type": "text",
         "placeholder": "Enter your name",
-        "defaultValue": "",
+        "value": "one",
+        "validations": [
+            {
+                "required": true,
+                "min": 1,
+                "max": 155
+            }
+        ],
         "formGroupClass": "mb-3 col-sm-12",
         "labelClass": "text-sm fw-semibold",
         "inputClass": "text-sm bg-light form-control-sm border-0"
@@ -14,7 +21,12 @@
         "label": "Password",
         "type": "password",
         "placeholder": "Enter your password",
-        "defaultValue": "",
+        "value": "wto",
+        "validations": [
+            {
+                "required": true
+            }
+        ],
         "formGroupClass": "mb-3 col-sm-12",
         "labelClass": "text-sm fw-semibold",
         "inputClass": "text-sm bg-light form-control-sm border-0"
