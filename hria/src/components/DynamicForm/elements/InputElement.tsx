@@ -1,5 +1,5 @@
 import React from "react";
-import { Field, FieldInputProps, FieldProps } from "formik";
+import { Field, FieldInputProps } from "formik";
 import { InputElementProps } from "../elements.interface";
 
 const InputElement: React.FC<InputElementProps> = ({ type, id, placeholder, inputClass }) => {

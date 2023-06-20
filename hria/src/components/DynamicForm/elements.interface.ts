@@ -12,7 +12,8 @@ export interface Field {
     formGroupClass?: string;
     labelClass?: string;
     inputClass?: string;
-    options?: string[] | Option[]
+    options?: string[] | Option[];
+    rows?: number;
 }
 
 export interface Option {
@@ -30,8 +31,28 @@ export interface DynamicFormProps {
 }
 
 export interface InputElementProps {
-    id: string;
-    type: string;
-    inputClass?: string;
-    placeholder?: string;
+    id: Field['id'];
+    type: Field['type'];
+    inputClass?: Field['inputClass'];
+    placeholder?: Field['placeholder'];
+}
+
+export interface RadioCheckElementProps {
+    options: Field['options'];
+    id: Field['id'];
+    type: Field['type']
+}
+
+export interface SelectElementProps {
+    options?: Field['options'];
+    id: Field['id'];
+    inputClass?: Field['inputClass']; // Make inputClass optional
+    placeholder?: Field['placeholder'];
+}
+
+export interface TextareaElementProps {
+    id: Field['id'];
+    inputClass?: Field['inputClass']; // Make inputClass optional
+    placeholder?: Field['placeholder'];
+    rows?: Field['rows'];
 }
