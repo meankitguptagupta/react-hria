@@ -4,12 +4,7 @@
         "label": "",
         "type": "image_upload",
         "formGroupClass": "mb-3",
-        "labelClass": "text-secondary",
-        "validations": [
-            {
-                "required": true
-            }
-        ]
+        "labelClass": "text-secondary"
     },
     {
         "id": "name",
@@ -41,7 +36,6 @@
         "label": "Select Gender *",
         "type": "select",
         "placeholder": "",
-        "defaultValue": "",
         "formGroupClass": "mb-3 col-md-6",
         "labelClass": "text-secondary",
         "inputClass": "",
@@ -64,7 +58,6 @@
         "label": "Blood Group",
         "type": "select",
         "placeholder": "Select an option",
-        "defaultValue": "",
         "formGroupClass": "mb-3 col-md-6",
         "labelClass": "text-secondary",
         "inputClass": "",
