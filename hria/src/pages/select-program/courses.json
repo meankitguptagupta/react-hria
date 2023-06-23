@@ -1,0 +1,142 @@
+[
+    {
+        "degree": "BS Hons Degree Program",
+        "programs": [
+            {
+                "name": "Computer Science",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Mathematics",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Physics",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Islamic Studies",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "English",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Zoology",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Zoology",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "evening"
+            }
+        ]
+    },
+    {
+        "degree": "Associate Degree Programs (ADP)",
+        "programs": [
+            {
+                "name": "Associate Degree in Science",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Associate Degree in Arts",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Associate Degree in Commerce",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            }
+        ]
+    },
+    {
+        "degree": "Intermediate Program",
+        "programs": [
+            {
+                "name": "FSc - Pre medical",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "FSc - Pre engineering",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "ICS - general science",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "FA - IT",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "I - Com",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            }
+        ]
+    },
+    {
+        "degree": "Middle / High School",
+        "programs": [
+            {
+                "name": "Grade 6",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Grade 7",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Grade 8",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Grade 9",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            },
+            {
+                "name": "Grade 10",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "morning"
+            }
+        ]
+    },
+    {
+        "degree": "Dars e Nizami",
+        "programs": [
+            {
+                "name": "Dars e Nizami",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "Morning"
+            }
+        ]
+    },
+    {
+        "degree": "Tahfeez ul Quran",
+        "programs": [
+            {
+                "name": "Tahfeez ul Quran",
+                "deadline": "Monday April 23, 2023 - 17:00 (Pakistan Std Time)",
+                "batch": "Morning"
+            }
+        ]
+    }
+]
