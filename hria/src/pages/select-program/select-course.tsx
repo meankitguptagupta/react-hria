@@ -9,18 +9,18 @@ interface SelectCourseProps {
 
 const SelectCourse: React.FC<SelectCourseProps> = ({ courses, selectedCourseIndex, setSelectedCourseIndex }) => {
     return (
-        <>
+        <div className="btn-md-group d-md-flex" role="group">
             {courses.map((item, index) => (
                 <span
                     key={`SelectCourse-${index}`}
-                    className={`btn ${!index ? '' : 'ms-1'} ${selectedCourseIndex === index ? 'btn-primary' : 'btn-outline-primary'
+                    className={`btn text-sm ${!index ? '' : 'ms-sm-0 ms-md-2'} rounded w-100 ${selectedCourseIndex === index ? 'btn-primary' : 'btn-outline-primary'
                         }`}
                     onClick={(e) => setSelectedCourseIndex(index)}
                 >
                     {item.degree}
                 </span>
             ))}
-        </>
+        </div>
     );
 };
 

@@ -1,7 +1,7 @@
 import FormSchema from '../../json-forms/personal-information.json';
 import { ProfileInstructions } from './profile-instruction';
 import { DynamicFormComponent } from '../../components/DynamicForm';
-import { PageProps } from './student.interface';
+import { PageProps } from '../page.interface';
 import React from 'react';
 
 export const Profile: React.FC<PageProps> = ({ formRef }) => {

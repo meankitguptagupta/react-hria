@@ -1,6 +1,6 @@
 import React from 'react';
 import FormSchema from '../../json-forms/contact-information.json';
-import { PageProps } from './student.interface';
+import { PageProps } from '../page.interface';
 import { DynamicFormComponent } from '../../components/DynamicForm';
 
 export const ContactInformation: React.FC<PageProps> = ({ formRef }) => {

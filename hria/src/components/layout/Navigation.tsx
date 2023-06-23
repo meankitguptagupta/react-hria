@@ -9,14 +9,14 @@ export const NavigationComponent = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="navbar-collapse collapse" id="navbarNav">
-                <ul className="navbar-nav w-100 d-flex justify-content-between">
+                <ul className="navbar-nav w-100 btn-md-group d-md-flex">
                     {routes.map((route, index) => (
                         <li className={`nav-item flex-grow-1 ${!index ? '' : 'ms-md-1'}`} key={`link-${index}`}>
                             <NavLink
                                 end
                                 to={route.route}
                                 className={({ isActive }) =>
-                                    isActive ? "btn rounded text-uppercase btn-block btn-success" : " btn rounded text-uppercase btn-block btn-secondary"
+                                    isActive ? "btn w-100 rounded text-uppercase btn-block btn-success" : " btn w-100 rounded text-uppercase btn-block btn-secondary"
                                 }
                             >
                                 {route.label}

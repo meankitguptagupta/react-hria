@@ -1,9 +1,7 @@
 import React from 'react';
 import FormSchema from '../../json-forms/parent-information.json';
-import { PageProps } from './student.interface';
+import { PageProps } from '../page.interface';
 import { DynamicFormComponent } from '../../components/DynamicForm';
-import { FormikHelpers } from 'formik';
-import { DataObject } from '../../components/DynamicForm/elements.interface';
 
 export const ParentInformation: React.FC<PageProps> = ({ formRef }) => {
 

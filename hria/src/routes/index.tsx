@@ -10,8 +10,8 @@ const AuthLayout = lazy(() => import('../components/auth')),
     ForgotPassword = lazy(() => import('../pages/auth/ForgotPassword')),
     LayoutComponent = lazy(() => import('../components/layout')),
     StudentProfile = lazy(() => import('../pages/student-profile')),
-    SelectProgram = lazy(() => import('../pages/select-program'))
-// Qualification = lazy(() => import('../pages/qualifications'))
+    SelectProgram = lazy(() => import('../pages/select-program')),
+    Qualification = lazy(() => import('../pages/qualifications'))
 
 export const router = createBrowserRouter([
     {
@@ -42,10 +42,10 @@ export const router = createBrowserRouter([
                 {
                     path: "programs",
                     element: <SelectProgram />
+                }, {
+                    path: "qualifications",
+                    element: <Qualification />
                 }, //{
-                //     path: "qualifications",
-                //     element: <Qualification />
-                // }, {
                 //     path: "document-upload",
                 //     element: <StudentProfile />
                 // }, {

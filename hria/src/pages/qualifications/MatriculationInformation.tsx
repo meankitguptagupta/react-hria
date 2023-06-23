@@ -1,14 +1,9 @@
 import FormSchema from '../../json-forms/matriculation-information.json';
-import DynamicFormComponent from '../../components/DynamicForm';
-import { useState } from 'react';
+import React from 'react';
+import { PageProps } from '../page.interface';
+import { DynamicFormComponent } from '../../components/DynamicForm';
 
-export const MatriculationInformation = () => {
-
-    const [formValues, setFormValues] = useState({})
-
-    const onSubmit = () => {
-        console.info('submit clicked', formValues)
-    }
+export const MatriculationInformation: React.FC<PageProps> = ({ formRef }) => {
 
     return (
         <>
@@ -16,7 +11,7 @@ export const MatriculationInformation = () => {
             <hr className="divider" />
             <p className="text-secondary fs-6">Please enter your Matriculation / O-Level Marks</p>
 
-            <DynamicFormComponent formData={FormSchema} setFormValues={setFormValues} />
+            <DynamicFormComponent formData={FormSchema} formRef={formRef} />
         </>
     );
 };

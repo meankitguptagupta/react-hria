@@ -41,5 +41,13 @@
         "placeholder": "Enter phone number like 0300-1234567",
         "formGroupClass": "mb-3 col-md-4",
         "labelClass": "text-secondary"
+    },
+    {
+        "id": "institute",
+        "label": "School / College / Institute Name *",
+        "type": "text",
+        "placeholder": "Enter institute name",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary"
     }
 ]
