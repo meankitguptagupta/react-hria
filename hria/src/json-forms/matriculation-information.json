@@ -49,5 +49,53 @@
         "placeholder": "Enter institute name",
         "formGroupClass": "mb-3 col-md-4",
         "labelClass": "text-secondary"
+    },
+    {
+        "id": "roll_number",
+        "label": "Roll Number *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary"
+    },
+    {
+        "id": "registration_number",
+        "label": "Registration Number *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary"
+    },
+    {
+        "id": "passing_year",
+        "label": "Passing Year *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary"
+    },
+    {
+        "id": "total_marks",
+        "label": "Total Marks *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary"
+    },
+    {
+        "id": "obtain_marks",
+        "label": "Obtain Marks *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary"
+    },
+    {
+        "id": "percentage",
+        "label": "Percentage *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary"
     }
 ]
