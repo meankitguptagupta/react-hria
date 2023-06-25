@@ -3,6 +3,7 @@ import { lazy } from 'react';
 import {
     createBrowserRouter
 } from "react-router-dom";
+import Documents from '../pages/documents';
 
 const AuthLayout = lazy(() => import('../components/auth')),
     Login = lazy(() => import('../pages/auth')),
@@ -45,10 +46,10 @@ export const router = createBrowserRouter([
                 }, {
                     path: "qualifications",
                     element: <Qualification />
-                }, //{
-                //     path: "document-upload",
-                //     element: <StudentProfile />
-                // }, {
+                }, {
+                    path: "uploads",
+                    element: <Documents />
+                }, // {
                 //     path: "select-facilities",
                 //     element: <StudentProfile />
                 // }, {

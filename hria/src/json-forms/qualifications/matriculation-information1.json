@@ -1,0 +1,86 @@
+[
+    {
+        "id": "roll_number",
+        "label": "Roll Number *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true,
+                "min": 1,
+                "max": 155
+            }
+        ]
+    },
+    {
+        "id": "registration_number",
+        "label": "Registration Number *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true,
+                "min": 1,
+                "max": 155
+            }
+        ]
+    },
+    {
+        "id": "passing_year",
+        "label": "Passing Year *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true,
+                "min": 1,
+                "max": 155
+            }
+        ]
+    },
+    {
+        "id": "total_marks",
+        "label": "Total Marks *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true,
+                "min": 1,
+                "max": 155
+            }
+        ]
+    },
+    {
+        "id": "obtain_marks",
+        "label": "Obtain Marks *",
+        "type": "text",
+        "placeholder": "",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true,
+                "min": 1,
+                "max": 155
+            }
+        ]
+    },
+    {
+        "id": "percentage",
+        "label": "Percentage *",
+        "type": "text",
+        "placeholder": "%",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "disabled": true
+    }
+]

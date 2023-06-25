@@ -1,0 +1,121 @@
+[
+    {
+        "id": "inter_degree",
+        "label": "Certificate / Degree *",
+        "type": "select",
+        "placeholder": "Please Select",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "options": [
+            "F.Sc (Pre-Engineering)",
+            "F.Sc (Pre-Medical)",
+            "ICS",
+            "FA",
+            "I.Com",
+            "D.Com",
+            "A-Level",
+            "D.A.E",
+            "Others"
+        ],
+        "validations": [
+            {
+                "required": true
+            }
+        ]
+    },
+    {
+        "id": "inter_subjects",
+        "label": "Major Subjects *",
+        "type": "text",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true,
+                "min": 1,
+                "max": 155
+            }
+        ]
+    },
+    {
+        "id": "inter_board",
+        "label": "Board / University *",
+        "type": "select",
+        "placeholder": "Please Select",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "options": [
+            "BISE-Bahawalpur",
+            "BISE-Gujranwala",
+            "BISE-Lahore",
+            "BISE-Multan",
+            "BISE-Rawalpindi",
+            "BISE-Sahiwal",
+            "BISE-Sargodhah",
+            "BISE-DO Khan",
+            "FBISE-Islamabad",
+            "Agha Khan Board - Karachi",
+            "BIE-Karachi",
+            "BSE-Karachi",
+            "BISEN - Sukker",
+            "BISE-Hydrabad",
+            "BISE - Larkana",
+            "BISE-Mirpur Khas",
+            "BISE - Abbottabad",
+            "BISE - Peshawar",
+            "BISE-Kohat",
+            "BISE- Mardan",
+            "BISE-Swat",
+            "BISE - DI Khan",
+            "BISE- Quetta",
+            "BISE - Turbat",
+            "BISE-Zhov",
+            "AJK BISE, Mirpur",
+            "Gilgit Balistan BISE Karakurum",
+            "Punjab BTE - Lahore",
+            "KPK BTE - Peshawar",
+            "Sindh BTE - Karachi",
+            "Baluchistan TEB - Quetta",
+            "Cambridge International Examination",
+            "Pearson Edexel",
+            "Allama Iqbal Open University",
+            "Virtual University",
+            "Punjab University",
+            "Others"
+        ],
+        "validations": [
+            {
+                "required": true
+            }
+        ]
+    },
+    {
+        "id": "institute",
+        "label": "School / College / Institute Name *",
+        "type": "text",
+        "placeholder": "Enter institute name",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true
+            }
+        ]
+    },
+    {
+        "id": "institute_completed",
+        "label": "Have you completed Intermediate / Equivalent Degree *",
+        "type": "radio",
+        "formGroupClass": "mb-3 col-md-4",
+        "labelClass": "text-secondary",
+        "validations": [
+            {
+                "required": true
+            }
+        ],
+        "options": [
+            "Yes",
+            "No"
+        ]
+    }
+]

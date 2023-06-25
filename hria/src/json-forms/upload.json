@@ -1,0 +1,71 @@
+[
+    {
+        "id": "cnic_image",
+        "label": "Student CNIC / B-Form Image (front side) *",
+        "type": "upload",
+        "validations": [
+            {
+                "required": true
+            }
+        ],
+        "formGroupClass": "mb-3",
+        "labelClass": "text-sm text-secondary"
+    },
+    {
+        "id": "parent_cnic_image",
+        "label": "Parent / Guardian CNIC / B-Form Image (front side) *",
+        "type": "upload",
+        "validations": [
+            {
+                "required": true
+            }
+        ],
+        "formGroupClass": "mb-3",
+        "labelClass": "text-sm text-secondary"
+    },
+    {
+        "id": "inter_cert_image",
+        "label": "Intermediate / A-Level Certificate *",
+        "type": "upload",
+        "validations": [
+            {
+                "required": true
+            }
+        ],
+        "formGroupClass": "mb-3",
+        "labelClass": "text-sm text-secondary"
+    },
+    {
+        "id": "domicile_cert_image",
+        "label": "Domicile Certificate *",
+        "type": "upload",
+        "validations": [
+            {
+                "required": true
+            }
+        ],
+        "formGroupClass": "mb-3",
+        "labelClass": "text-sm text-secondary"
+    },
+    {
+        "id": "noc_image",
+        "label": "NOC from other Brands *",
+        "type": "upload",
+        "formGroupClass": "mb-3",
+        "labelClass": "text-sm text-secondary"
+    },
+    {
+        "id": "quran_cert_image",
+        "label": "Hafiz e Quran Certificate issued from Govt. approved Madrissa",
+        "type": "upload",
+        "formGroupClass": "mb-3",
+        "labelClass": "text-sm text-secondary"
+    },
+    {
+        "id": "disability_cert_image",
+        "label": "Disability Certificate from Govt. Hospital",
+        "type": "upload",
+        "formGroupClass": "mb-3",
+        "labelClass": "text-sm text-secondary"
+    }
+]

@@ -13,7 +13,7 @@ const SelectElement: React.FC<SelectElementProps> = ({ options = [], id, inputCl
                     id={id}
                     {...field}
                 >
-                    <option selected>{placeholder}</option>
+                    <option>{placeholder}</option>
                     {options.map((option, optionIndex) => {
                         let value: string;
                         let label: string;
@@ -30,7 +30,6 @@ const SelectElement: React.FC<SelectElementProps> = ({ options = [], id, inputCl
                             <option
                                 key={`select-${id}-${genRandNum()}`}
                                 value={value}
-                                selected={field.value === value}
                             >
                                 {label}
                             </option>

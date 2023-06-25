@@ -14,6 +14,7 @@ export interface Field {
     inputClass?: string;
     options?: string[] | Option[];
     rows?: number;
+    disabled?: boolean;
 }
 
 export interface Option {
@@ -35,6 +36,7 @@ export interface InputElementProps {
     type: Field['type'];
     inputClass?: Field['inputClass'];
     placeholder?: Field['placeholder'];
+    disabled?: Field['disabled']
 }
 
 export interface RadioCheckElementProps {

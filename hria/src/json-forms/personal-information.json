@@ -1,12 +1,5 @@
 [
     {
-        "id": "image",
-        "label": "",
-        "type": "image_upload",
-        "formGroupClass": "mb-3",
-        "labelClass": "text-secondary"
-    },
-    {
         "id": "name",
         "label": "Full Name (as per school, college or university degree) *",
         "type": "text",

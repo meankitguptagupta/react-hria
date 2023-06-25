@@ -1,11 +1,12 @@
 import React from "react";
-import { DataObject, DynamicFormProps, Field, Option } from "./elements.interface";
-import { Form, Formik, FormikHelpers, ErrorMessage, Field as FormikField } from "formik";
+import { DataObject, DynamicFormProps, Field } from "./elements.interface";
+import { Form, Formik, FormikHelpers, ErrorMessage } from "formik";
 import InputElement from "./elements/InputElement";
 import createValidationSchema from "./validation.schema";
 import RadioCheckElement from "./elements/RadioCheckElement";
 import SelectElement from "./elements/SelectElement";
 import TextareaElement from "./elements/TextareaElement";
+import UploadElement from "./elements/UploadElement";
 
 export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
     formData,
@@ -28,6 +29,8 @@ export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
                 return <RadioCheckElement {...field} options={field?.options || []} />;
             case 'select':
                 return <SelectElement {...field} />;
+            case 'upload':
+                return <UploadElement {...field} />;
             default:
                 return <InputElement {...field} />;
         }

@@ -1,11 +1,5 @@
 [
     {
-        "id": "guardian_image",
-        "type": "image_upload",
-        "formGroupClass": "mb-3 col-sm-12",
-        "labelClass": "text-secondary"
-    },
-    {
         "id": "relation",
         "label": "Relation *",
         "type": "select",

@@ -1,5 +1,5 @@
 import * as Yup from "yup";
-import { DataObject, Field } from "./elements.interface";
+import { Field } from "./elements.interface";
 
 const createValidationSchema = (formData: Field[]): Yup.Schema<any> => {
     return Yup.object().shape(
@@ -7,21 +7,22 @@ const createValidationSchema = (formData: Field[]): Yup.Schema<any> => {
             if (field.validations) {
                 const fieldValidation = field.validations.reduce(
                     (fieldSchema: any, validation: any) => {
+                        let label = field.label?.replace('*', '')
                         if (validation.required) {
                             fieldSchema = fieldSchema.required(
-                                `${field.label} is required`
+                                `${label} is required`
                             );
                         }
                         if (validation.min) {
                             fieldSchema = fieldSchema.min(
                                 validation.min,
-                                `${field.label} must be at least ${validation.min} characters`
+                                `${label} must be at least ${validation.min} characters`
                             );
                         }
                         if (validation.max) {
                             fieldSchema = fieldSchema.max(
                                 validation.max,
-                                `${field.label} cannot exceed ${validation.max} characters`
+                                `${label} cannot exceed ${validation.max} characters`
                             );
                         }
                         return fieldSchema;
