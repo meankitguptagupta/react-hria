@@ -1,27 +1,29 @@
-import React, { useRef } from 'react';
-import { FormikHelpers } from 'formik';
+import React from 'react';
 import { DataObject } from '../../components/DynamicForm/elements.interface';
 import UploadInstruction from './UploadInstruction';
 import { DynamicFormComponent } from '../../components/DynamicForm';
 import formData from '../../json-forms/upload.json';
 
-export const Documents: React.FC = () => {
+const Documents: React.FC = () => {
 
-    const formRef = useRef<FormikHelpers<DataObject> | null>(null);
+    const handleFormSubmit = (formData: DataObject) => {
+        // Perform any actions with the form data
+        console.log(formData);
+    };
 
     return (
-        <div>
+        <div className='document-upload'>
             <div className="rounded bg-white container-fluid py-3 px-5">
                 <UploadInstruction />
 
-                <DynamicFormComponent formData={formData} formRef={formRef} />
+                <DynamicFormComponent formData={formData} onSubmit={handleFormSubmit} formId="document-upload-form" />
             </div>
 
             <div className="mb-3"></div>
 
-            <div className="justify-content-end d-flex">
-                <span className="btn border px-5 bg-white me-3">Back</span>
-                <span className="btn btn-secondary px-4">Save & Next</span>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button className="btn border bg-white w-md-15 me-md-2" type="reset" form="document-upload-form">Back</button>
+                <button className="btn btn-secondary w-md-15" type="submit" form="document-upload-form">Save & Next</button>
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import React from 'react';
 import { PageProps } from '../page.interface';
 import { DynamicFormComponent } from '../../components/DynamicForm';
 
-export const MatriculationInformation: React.FC<PageProps> = ({ formRef }) => {
+export const MatriculationInformation: React.FC<PageProps> = ({ onSubmit, formId }) => {
 
     return (
         <>
@@ -12,8 +12,8 @@ export const MatriculationInformation: React.FC<PageProps> = ({ formRef }) => {
             <hr className="divider" />
             <p className="text-secondary fs-6">Please enter your Matriculation / O-Level Marks</p>
 
-            <DynamicFormComponent formData={FormSchema} formRef={formRef} />
-            <DynamicFormComponent formData={FormSchema1} formRef={formRef} />
+            <DynamicFormComponent formData={FormSchema} onSubmit={onSubmit} formId={formId} />
+            <DynamicFormComponent formData={FormSchema1} onSubmit={onSubmit} formId={formId} />
         </>
     );
 };

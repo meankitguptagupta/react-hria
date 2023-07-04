@@ -5,7 +5,7 @@ import { PageProps } from '../page.interface';
 import React from 'react';
 import { ImageUpload } from './ImageUpload';
 
-export const Profile: React.FC<PageProps> = ({ formRef }) => {
+export const Profile: React.FC<PageProps> = ({ onSubmit, formId }) => {
 
 
     return (
@@ -15,7 +15,7 @@ export const Profile: React.FC<PageProps> = ({ formRef }) => {
 
             <ImageUpload />
 
-            <DynamicFormComponent formData={FormSchema} formRef={formRef} />
+            <DynamicFormComponent formData={FormSchema} onSubmit={onSubmit} formId={formId} />
 
             <ProfileInstructions />
         </div>

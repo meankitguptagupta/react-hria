@@ -3,20 +3,15 @@ import { Link } from "react-router-dom";
 
 import FormSchema from "../../json-forms/login.json";
 import { DynamicFormComponent } from "../../components/DynamicForm";
-import { FormikHelpers } from "formik";
 import { DataObject } from "../../components/DynamicForm/elements.interface";
 
 const Login: React.FC = () => {
-    const formRef = React.useRef<FormikHelpers<DataObject> | null>(null);
 
-    const handleSubmit = () => {
-        if (formRef.current) {
-            // @ts-ignore
-            const { values, isValid } = formRef.current;
-            console.log("Form Values:", values);
-            // Access the form values here
-        }
-    }
+    const handleFormSubmit = (formData: DataObject) => {
+        // Perform any actions with the form data
+        console.log(formData);
+    };
+
 
     return (
         <div className="login">
@@ -28,7 +23,7 @@ const Login: React.FC = () => {
                 </Link>
             </p>
 
-            <DynamicFormComponent formData={FormSchema} formRef={formRef} />
+            <DynamicFormComponent formData={FormSchema} formId="login-form" onSubmit={handleFormSubmit} />
 
             <div className="custom-control mb-1 text-end">
                 <Link
@@ -39,9 +34,10 @@ const Login: React.FC = () => {
                 </Link>
             </div>
 
-            <span className="btn btn-primary text-sm mb-4" onClick={handleSubmit}>
-                Sign in
-            </span>
+            <button className="btn btn-primary text-sm mb-4" type="submit" form="login-form">
+                Log In
+            </button>
+
         </div>
     );
 };

@@ -4,7 +4,7 @@ import React from 'react';
 import { PageProps } from '../page.interface';
 import { DynamicFormComponent } from '../../components/DynamicForm';
 
-export const IntermediateInformation: React.FC<PageProps> = ({ formRef }) => {
+export const IntermediateInformation: React.FC<PageProps> = ({ onSubmit, formId }) => {
 
     return (
         <>
@@ -12,7 +12,7 @@ export const IntermediateInformation: React.FC<PageProps> = ({ formRef }) => {
             <hr className="divider" />
             <p className="text-secondary fs-6">Please enter your Intermediate / A-Level Marks</p>
 
-            <DynamicFormComponent formData={FormSchema} formRef={formRef} />
+            <DynamicFormComponent formData={FormSchema} onSubmit={onSubmit} formId={formId} />
             {/* <div className='justify-content-end d-flex'> */}
             <div className='row'>
                 <div className="col-sm-4"></div>
@@ -32,7 +32,7 @@ export const IntermediateInformation: React.FC<PageProps> = ({ formRef }) => {
 
             </div>
 
-            <DynamicFormComponent formData={FormSchema1} formRef={formRef} />
+            <DynamicFormComponent formData={FormSchema1} onSubmit={onSubmit} formId={formId} />
 
         </>
     );

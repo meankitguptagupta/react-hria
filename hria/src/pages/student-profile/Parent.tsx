@@ -4,7 +4,7 @@ import { PageProps } from '../page.interface';
 import { DynamicFormComponent } from '../../components/DynamicForm';
 import { ImageUpload } from './ImageUpload';
 
-export const ParentInformation: React.FC<PageProps> = ({ formRef }) => {
+export const ParentInformation: React.FC<PageProps> = ({ onSubmit, formId }) => {
 
     return (
         <div className="rounded bg-white container-fluid py-3 px-5">
@@ -13,7 +13,7 @@ export const ParentInformation: React.FC<PageProps> = ({ formRef }) => {
 
             <ImageUpload />
 
-            <DynamicFormComponent formData={FormSchema} formRef={formRef} />
+            <DynamicFormComponent formData={FormSchema} onSubmit={onSubmit} formId={formId} />
         </div>
     );
 };

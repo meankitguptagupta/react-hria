@@ -10,7 +10,8 @@ import UploadElement from "./elements/UploadElement";
 
 export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
     formData,
-    formRef
+    formId,
+    onSubmit
 }) => {
 
     const initialValues: DataObject = formData.reduce(
@@ -36,17 +37,21 @@ export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
         }
     };
 
-    const onSubmitForm = (values: DataObject, actions: FormikHelpers<DataObject>) => { };
+    const onSubmitForm = (values: DataObject, actions: FormikHelpers<DataObject>) => {
+        actions.setSubmitting(false);
+        actions.resetForm();
+        onSubmit(values); // Call the onSubmit prop with the form values
+    };
 
 
     return (
         <Formik
-            innerRef={(ref) => (formRef.current = ref)}
             initialValues={initialValues}
             validationSchema={validationSchema}
-            onSubmit={onSubmitForm} // Updated onSubmit prop
+            onSubmit={onSubmitForm}
         >
-            <Form>
+
+            <Form id={formId}>
                 <div className="row">
                     {formData.map((field: Field, i: number) => (
                         <div

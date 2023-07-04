@@ -15,3 +15,13 @@ body {
 .text-link {
     color: #3B9CFB;
 }
+
+@media (min-width: 768px) {
+    .w-md-15 {
+        width: 15% !important;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

@@ -1,17 +1,18 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Instructions } from "./Instructions";
 import { MatriculationInformation } from "./MatriculationInformation";
-import { FormikHelpers } from 'formik';
 import { DataObject } from '../../components/DynamicForm/elements.interface';
 import { IntermediateInformation } from './IntermediateInformation';
 
 export const Qualification: React.FC = () => {
 
-    const instRef = useRef<FormikHelpers<DataObject> | null>(null);
-    const matrRef = useRef<FormikHelpers<DataObject> | null>(null);
+    const handleFormSubmit = (formData: DataObject) => {
+        // Perform any actions with the form data
+        console.log(formData);
+    };
 
     return (
-        <div>
+        <div className='qualification'>
             <div className="rounded bg-white container-fluid py-3 px-5">
                 <Instructions />
             </div>
@@ -19,20 +20,20 @@ export const Qualification: React.FC = () => {
             <div className="mb-3"></div>
 
             <div className="rounded bg-white container-fluid py-3 px-5">
-                <MatriculationInformation formRef={matrRef} />
+                <MatriculationInformation onSubmit={handleFormSubmit} formId="qualification-form" />
             </div>
 
             <div className="mb-3"></div>
 
             <div className="rounded bg-white container-fluid py-3 px-5">
-                <IntermediateInformation formRef={instRef} />
+                <IntermediateInformation onSubmit={handleFormSubmit} formId="qualification-form" />
             </div>
 
             <div className="mb-3"></div>
 
-            <div className="justify-content-end d-flex">
-                <span className="btn border px-5 bg-white me-3">Back</span>
-                <span className="btn btn-secondary px-4">Save & Next</span>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button className="btn border bg-white w-15 me-md-2" type="reset" form="qualification-form">Back</button>
+                <button className="btn btn-secondary w-15" type="submit" form="qualification-form">Save & Next</button>
             </div>
         </div>
     );

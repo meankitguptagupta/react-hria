@@ -44,9 +44,11 @@ const SelectProgram: React.FC = () => {
             </div>
 
             <div className="mb-3"></div>
-            <div className="justify-content-end d-flex">
-                <span className="btn border px-5 bg-white me-3">Back</span>
-                <span className="btn btn-secondary px-4">Save & Next</span>
+
+
+            <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button className="btn border bg-white w-15 me-md-2" type="reset">Back</button>
+                <button className="btn btn-secondary w-15" type="submit">Save & Next</button>
             </div>
         </div>
     );

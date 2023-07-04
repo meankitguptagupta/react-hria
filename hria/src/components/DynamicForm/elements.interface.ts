@@ -28,7 +28,8 @@ export interface DataObject {
 
 export interface DynamicFormProps {
     formData: Field[];
-    formRef: React.MutableRefObject<FormikHelpers<DataObject> | null>;
+    formId: string;
+    onSubmit: (values: DataObject) => void;
 }
 
 export interface InputElementProps {

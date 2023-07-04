@@ -7,7 +7,7 @@ RUN apt-get update  \
     && apt-get upgrade -y   \
     && ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime \
     && apt-get install curl build-essential git -y  \
-    && curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh   \
+    && curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh   \
     && bash /tmp/nodesource_setup.sh    \
     && apt install nodejs -y
 

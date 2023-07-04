@@ -9,7 +9,7 @@ interface CustomType {
 
 const ProgramSelection: React.FC<CustomType> = ({ course }) => {
     return (
-        <div className="table-responsive">
+        <form className="table-responsive">
             <table className="table table-hover text-left text-secondary">
                 <thead className="text-uppercase">
                     <tr>
@@ -24,7 +24,7 @@ const ProgramSelection: React.FC<CustomType> = ({ course }) => {
                     ))}
                 </tbody>
             </table>
-        </div>
+        </form>
     );
 };
 
