@@ -23,6 +23,7 @@ const RadioCheckElement: React.FC<RadioCheckElementProps> = ({ options = [], id,
                                 className="form-check-input"
                                 type={type}
                                 id={`${id}-${optionIndex}`}
+                                name={id}
                                 value={value}
                                 checked={field.value === value}
                                 onChange={field.onChange}

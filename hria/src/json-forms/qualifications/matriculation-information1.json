@@ -78,9 +78,13 @@
         "id": "percentage",
         "label": "Percentage *",
         "type": "text",
-        "placeholder": "%",
+        "placeholder": "0%",
         "formGroupClass": "mb-3 col-md-4",
         "labelClass": "text-secondary",
-        "disabled": true
+        "disabled": true,
+        "observe": {
+            "formula": "return ((values.obtain_marks / values.total_marks) * 100).toFixed(2);",
+            "formula_suffix": "%"
+        }
     }
 ]

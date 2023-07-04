@@ -78,9 +78,13 @@
         "id": "inter_percentage",
         "label": "Percentage *",
         "type": "text",
-        "placeholder": "75%",
+        "placeholder": "0%",
         "formGroupClass": "mb-3 col-md-4",
         "labelClass": "text-secondary",
-        "disabled": true
+        "disabled": true,
+        "observe": {
+            "formula": "return ((values.inter_obtain_marks / values.inter_total_marks) * 100).toFixed(2);",
+            "formula_suffix": "%"
+        }
     }
 ]

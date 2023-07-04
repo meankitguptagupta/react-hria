@@ -127,6 +127,12 @@
             "Physical",
             "Visual",
             "Any Other"
-        ]
+        ],
+        "observe": {
+            "condition": {
+                "fieldId": "special_person",
+                "value": "Yes"
+            }
+        }
     }
 ]

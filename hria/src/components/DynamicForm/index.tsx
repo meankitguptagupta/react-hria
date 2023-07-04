@@ -50,30 +50,55 @@ export const DynamicFormComponent: React.FC<DynamicFormProps> = ({
             validationSchema={validationSchema}
             onSubmit={onSubmitForm}
         >
+            {({ values }) => (
+                <Form id={formId}>
+                    <div className="row">
+                        {formData.map((field: Field, i: number) => {
+                            // check if element will show/hide on a condition
+                            if (field.observe) {
+                                if (field.observe.condition) {
+                                    // observe real time value
+                                    const { fieldId, value } = field.observe.condition;
+                                    const observedFieldValue = values[fieldId];
 
-            <Form id={formId}>
-                <div className="row">
-                    {formData.map((field: Field, i: number) => (
-                        <div
-                            className={`col-sm-12 ${field?.formGroupClass}`}
-                            key={`formdata-${i}`}
-                        >
-                            <label
-                                className={`lh-1 ${field?.labelClass}`}
-                                htmlFor={field.id}
-                            >
-                                {field?.label}
-                            </label>
-                            {renderField(field)}
-                            <ErrorMessage
-                                name={field.id}
-                                component="small"
-                                className="text-danger"
-                            />
-                        </div>
-                    ))}
-                </div>
-            </Form>
+                                    if (observedFieldValue !== value) {
+                                        return null; // Skip rendering the field if the observed field value doesn't match the specified value
+                                    }
+                                }
+
+                                // check for formula and set it into values
+                                if (field.observe.formula) {
+                                    const calculationFn = new Function("values", field.observe.formula);
+                                    const result = calculationFn(values);
+                                    if (result && result !== "NaN")
+                                        values[field.id] = calculationFn(values) + field?.observe?.formula_suffix;
+                                }
+                            }
+
+                            // else design element
+                            return (
+                                <div
+                                    className={`col-sm-12 ${field?.formGroupClass}`}
+                                    key={`formdata-${i}`}
+                                >
+                                    <label
+                                        className={`lh-1 ${field?.labelClass}`}
+                                        htmlFor={field.id}
+                                    >
+                                        {field?.label}
+                                    </label>
+                                    {renderField(field)}
+                                    <ErrorMessage
+                                        name={field.id}
+                                        component="small"
+                                        className="text-danger"
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
+                </Form>
+            )}
         </Formik>
     );
 };

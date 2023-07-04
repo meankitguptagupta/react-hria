@@ -15,6 +15,14 @@ export interface Field {
     options?: string[] | Option[];
     rows?: number;
     disabled?: boolean;
+    observe?: {
+        condition?: {
+            fieldId: string,
+            value: string
+        },
+        formula?: string;
+        formula_suffix?: string;
+    }
 }
 
 export interface Option {
